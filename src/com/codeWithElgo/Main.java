@@ -1,6 +1,5 @@
 package com.codeWithElgo;
 
-import javax.xml.crypto.dsig.keyinfo.KeyValue;
 import java.util.*;
 
 public class Main {
@@ -11,38 +10,39 @@ public class Main {
     private static String MOINS = "-";
     private static String DIV = "/";
 
-
+    //Lancement du menu Calculatrice RPN
     public static void calculator() throws Exception {
 
-        System.out.println("Bienvenue dans la Calculatrice RPN \nPour Recommencer le Calcul taper \"clear\" \nA la fin de votre calcul taper \"exit\"!");
+        System.out.println("Bienvenue dans la Calculatrice RPN " +
+                "           \nPour Recommencer le Calcul taper \"clear\" " +
+                "           \nA la fin de votre calcul taper \"exit\"!");
 
         takeInput();
     }
-
+    //Analyse de l'opérateur saisie et Calcul
     public static void eval(String operateur){
         int result;
         int a = 0;
-        int b = 0;
+        int b=  0;
         if (operateur.equals(MULT)) {
-            stack.push(stack.pop() * stack.pop());
+            a= (int) stack.pop();
+            b=(int) stack.pop();
+            stack.push(multiplication(a, b));
 
         } else if (operateur.equals(DIV)) {
             a= (int) stack.pop();
             b=(int) stack.pop();
-            if (a==0)
-                System.out.println("Opération Impossible. Division By Zéro Exception");
-            else
-                stack.push(b / a);
+            stack.push(division(a , b));
 
         } else if (operateur.equals(PLUS)) {
             a= (int) stack.pop();
             b=(int) stack.pop();
-            stack.push(b + a);
+            stack.push(addition(a, b));
 
         } else if (operateur.equals(MOINS)) {
             a= (int) stack.pop();
             b=(int) stack.pop();
-            stack.push(b-a);
+            stack.push(soustraction(a,b));
 
         } else if (operateur.equals("=")) {
             result = (stack.pop());
@@ -55,12 +55,29 @@ public class Main {
                     stack.pop();
                 }
             }
-        } else if (operateur.equals("w")) {
-            for (int i = 0; i < stack.size(); i++) {
-                System.out.println(stack.get(i));
-            }
         }
     }
+
+    //Definition des méthodes des différentes opérations
+    public static Integer division(int a, int b) {
+        if (a==0)
+            System.out.println("Opération Impossible. Division By Zéro Exception");
+        return b / a;
+    }
+    public static Integer multiplication(int a, int b) {
+        return a * b;
+    }
+
+    public static Integer soustraction(int a, int b) {
+        return b - a;
+    }
+
+    public static Integer addition(int a, int b) {
+        return a + b;
+    }
+
+    //récupération des valeurs saisies par l'utilisateur et analayse du type (Opérateur ou opérande)
+    //Puis appelle de la fonction eval pour effectuer les opérations
     private static void takeInput() {
         String valeurSaisie = " ";
         while (!valeurSaisie.equals("exit")) {
@@ -69,6 +86,9 @@ public class Main {
             try {
                 int intNumOrOperand = Integer.valueOf(valeurSaisie);
                 stack.push(intNumOrOperand);
+                for (int i = 0; i < stack.size(); i++) {
+                    System.out.println(stack.get(i));
+                }
             } catch (Exception e) {
                 eval(valeurSaisie);
             }

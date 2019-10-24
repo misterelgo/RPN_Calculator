@@ -12,6 +12,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -21,9 +22,22 @@
   <component name="ProjectId" id="1SLWv3ya9FH7jnmdWZzc8QDfSFj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.codeWithElgo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.codeWithElgo" />
     </key>
@@ -40,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.codeWithElgo.Main" />
       <module name="RPN_Calculator" />
@@ -51,9 +65,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPN_Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeWithElgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeWithElgo" />
+      <option name="MAIN_CLASS_NAME" value="com.codeWithElgo.MainTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.division (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPN_Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeWithElgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeWithElgo" />
+      <option name="MAIN_CLASS_NAME" value="com.codeWithElgo.MainTest" />
+      <option name="METHOD_NAME" value="division(int,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.division" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPN_Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeWithElgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeWithElgo" />
+      <option name="MAIN_CLASS_NAME" value="com.codeWithElgo.MainTest" />
+      <option name="METHOD_NAME" value="division" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.soustraction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPN_Calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeWithElgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeWithElgo" />
+      <option name="MAIN_CLASS_NAME" value="com.codeWithElgo.MainTest" />
+      <option name="METHOD_NAME" value="soustraction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.MainTest.division" />
+        <item itemvalue="JUnit.MainTest.division (1)" />
+        <item itemvalue="JUnit.MainTest.soustraction" />
       </list>
     </recent_temporary>
   </component>
